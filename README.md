@@ -36,6 +36,8 @@ El panel mantiene exactamente tres consejos y tres casos para ajustarse al dise�
 
 El teléfono se edita en el CMS como número internacional sin espacios ni signos (por ejemplo, `593991234567`) y su formato visible se configura en el campo **Teléfono visible**. Un número inválido deshabilita los enlaces de WhatsApp y muestra un aviso en la página, en vez de enviar consultas al destino equivocado.
 
+El formulario de contacto no transmite ni almacena información en el sitio: prepara el texto en WhatsApp para que la persona lo revise y lo envíe voluntariamente. Se solicita únicamente un nombre opcional, el servicio y la consulta; se recomienda no incluir información confidencial.
+
 ## Mejoras sugeridas para revisar antes de publicar
 
 - Confirmar el nombre comercial, logotipo definitivo, datos del responsable y ubicación/área de atención.
