@@ -19,9 +19,9 @@
   },
   "services": {
     "engineering": {
-      "title": "Estudios de ingeniería",
-      "description": "Estudios técnicos para servicios y sistemas de telecomunicaciones, preparados de acuerdo con el alcance del proyecto y la normativa aplicable.",
-      "whatsappMessage": "Hola, quiero consultar sobre estudios de ingeniería regulatoria."
+      "title": "Obtención de Título Habilitante",
+      "description": "Elaboración y seguimiento de Estudios de Ingeniería ante la ARCOTEL, para la obtención del Título Habilitante.",
+      "whatsappMessage": "Hola, quiero consultar sobre la obtención de un Título Habilitante."
     },
     "sietel": {
       "title": "Gestión SIETEL",

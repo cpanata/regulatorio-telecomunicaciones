@@ -43,7 +43,7 @@ collections:
             name: "services"
             widget: "object"
             fields:
-              - label: "Estudios de ingeniería"
+              - label: "Obtención de Título Habilitante"
                 name: "engineering"
                 widget: "object"
                 fields:
