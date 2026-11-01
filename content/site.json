@@ -146,6 +146,20 @@
     "whatsappNumber": "593983022842",
     "phoneDisplay": "+593 98 302 2842"
   },
+  "privacy": {
+    "eyebrow": "Transparencia",
+    "title": "Aviso de privacidad",
+    "intro": "Este aviso describe qué ocurre con la información que compartes al usar este sitio y su formulario de contacto.",
+    "draftNote": "Aviso informativo inicial. Antes de utilizarlo como aviso formal, el propietario debe completar la identificación legal y domicilio del responsable del tratamiento, y revisar el texto conforme a la Ley Orgánica de Protección de Datos Personales.",
+    "responsible": "El sitio opera bajo la marca Regulatorio Telecomunicaciones. La identidad legal y el domicilio del responsable del tratamiento aún deben ser completados por el propietario.",
+    "purpose": "Si decides preparar y enviar una consulta, la información se utiliza únicamente para entender el servicio de interés y responderte por WhatsApp.",
+    "data": "El formulario solicita el servicio y el texto de tu consulta; el nombre es opcional. Evita incluir datos sensibles, credenciales u otra información confidencial.",
+    "handling": "El formulario no envía la consulta a un servidor del sitio ni la guarda en una base de datos. El navegador prepara un mensaje y abre WhatsApp; tú decides si lo envías. Si lo envías, WhatsApp y su proveedor tratan la información conforme a sus propios términos y políticas.",
+    "providers": "El sitio está alojado en Netlify y carga tipografías desde Google Fonts. Estos proveedores pueden recibir datos técnicos de conexión cuando tu navegador solicita sus recursos, de acuerdo con sus políticas de privacidad.",
+    "retention": "El sitio no conserva la información escrita en el formulario. Los mensajes que voluntariamente envíes por WhatsApp pueden quedar en tu dispositivo y en los sistemas de WhatsApp o del destinatario; su conservación se rige por esos servicios y por la gestión posterior de la consulta.",
+    "rights": "Puedes solicitar información sobre el tratamiento de los datos que hayas compartido y ejercer los derechos que correspondan conforme a la normativa ecuatoriana. El canal de contacto actualmente disponible es WhatsApp; la identidad y los datos legales del responsable deben completarse antes de usar este aviso como documento formal.",
+    "whatsappMessage": "Hola, deseo realizar una consulta sobre privacidad y tratamiento de datos personales."
+  },
   "footer": {
     "description": "Servicios regulatorios"
   }

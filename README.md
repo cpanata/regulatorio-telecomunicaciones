@@ -38,12 +38,14 @@ El teléfono se edita en el CMS como número internacional sin espacios ni signo
 
 El formulario de contacto no transmite ni almacena información en el sitio: prepara el texto en WhatsApp para que la persona lo revise y lo envíe voluntariamente. Se solicita únicamente un nombre opcional, el servicio y la consulta; se recomienda no incluir información confidencial.
 
+El sitio incluye un aviso inicial de privacidad editable desde el panel y enlaza la Ley Orgánica de Protección de Datos Personales y a la Superintendencia de Protección de Datos Personales. El aviso informa que Netlify aloja el sitio y que las tipografías provienen de Google Fonts. No es una revisión legal ni acredita por sí solo cumplimiento normativo: antes de utilizarlo como aviso formal, el propietario debe completar la identidad legal y domicilio del responsable y revisar los fines, bases de legitimación, conservación, transferencias y canales para ejercer derechos que correspondan a su operación.
+
 ## Mejoras sugeridas para revisar antes de publicar
 
 - Confirmar el nombre comercial, logotipo definitivo, datos del responsable y ubicación/área de atención.
 - Validar que el número de WhatsApp esté activo para recibir consultas y que los mensajes precargados representen el servicio ofrecido.
 - Reemplazar los casos ilustrativos por casos reales autorizados, con resultados verificables y permiso del cliente.
-- Revisar con asesoría competente el aviso de privacidad y los textos legales antes de habilitar formularios, analítica o recolección de datos personales.
+- Revisar con asesoría competente el aviso de privacidad inicial y los textos legales, especialmente antes de habilitar más formularios, analítica o recolección de datos personales.
 - Hacer una revisión final de requisitos y enlaces de ARCOTEL; definir quién actualizará el contenido cuando cambien normas o fechas.
 - Tras publicar, configurar dominio propio si se desea, revisar el título y la descripción en redes, y comprobar la experiencia desde teléfonos reales.
 

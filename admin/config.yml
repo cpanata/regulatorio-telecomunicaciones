@@ -194,6 +194,22 @@ collections:
               - { label: "Mensaje precargado de WhatsApp", name: "whatsappMessage", widget: "string" }
               - { label: "WhatsApp (código de país y número, solo dígitos)", name: "whatsappNumber", widget: "string" }
               - { label: "Teléfono visible", name: "phoneDisplay", widget: "string" }
+          - label: "Aviso de privacidad (revisar antes de editar)"
+            name: "privacy"
+            widget: "object"
+            fields:
+              - { label: "Etiqueta", name: "eyebrow", widget: "string" }
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Introducción", name: "intro", widget: "text" }
+              - { label: "Aviso de borrador", name: "draftNote", widget: "text" }
+              - { label: "Responsable del tratamiento", name: "responsible", widget: "text" }
+              - { label: "Finalidad", name: "purpose", widget: "text" }
+              - { label: "Datos tratados", name: "data", widget: "text" }
+              - { label: "Cómo funciona el envío", name: "handling", widget: "text" }
+              - { label: "Proveedores externos", name: "providers", widget: "text" }
+              - { label: "Conservación", name: "retention", widget: "text" }
+              - { label: "Derechos y canal de contacto", name: "rights", widget: "text" }
+              - { label: "Mensaje precargado para consultas de privacidad", name: "whatsappMessage", widget: "string" }
           - label: "Pie de página"
             name: "footer"
             widget: "object"

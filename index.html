@@ -198,6 +198,15 @@
     .contact-form .button { justify-self: start; border: 0; cursor: pointer; }
     .contact-privacy, .contact-status { color: #52634a !important; font-size: .75rem; line-height: 1.55; }
     .contact-status { min-height: 1.2em; }
+    .privacy-section { padding: 68px 0; background: #edf1e9; }
+    .privacy-content { max-width: 860px; margin-inline: auto; padding: clamp(24px, 5vw, 46px); border: 1px solid var(--line); border-radius: 22px; background: #fff; }
+    .privacy-content h2 { margin: 8px 0 12px; font: 800 clamp(1.7rem, 3vw, 2.4rem)/1.2 "Manrope", sans-serif; letter-spacing: -.04em; }
+    .privacy-content h3 { margin: 24px 0 6px; font: 700 1rem "Manrope", sans-serif; }
+    .privacy-content p { margin: 0; color: #4b5c70; font-size: .9rem; }
+    .privacy-draft { margin: 20px 0; padding: 15px 17px; border-left: 4px solid #d99020; border-radius: 8px; background: #fff7e8; color: #664614; font-size: .83rem; }
+    .privacy-meta { margin-top: 20px !important; font-size: .75rem !important; }
+    .privacy-links { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 20px; font-size: .83rem; font-weight: 700; }
+    .privacy-links a { color: #315d2e; }
     footer { padding: 27px 0; background: #071222; color: #a2afbf; }
     .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
     footer .brand { font-size: .95rem; }
@@ -242,6 +251,7 @@
       .contact-box { grid-template-columns: 1fr; padding: 29px 22px; }
       .contact-form { padding: 20px 16px; }
       .contact-form .button { justify-self: stretch; justify-content: center; }
+      .privacy-section { padding: 48px 0; }
       .footer-inner { flex-wrap: wrap; }
       .footer-links { order: 3; width: 100%; flex-wrap: wrap; }
       .admin-link { order: 4; }
@@ -719,11 +729,41 @@
             <label for="contact-message">¿En qué podemos ayudarte?
               <textarea id="contact-message" name="message" required maxlength="1200" placeholder="Describe brevemente tu consulta."></textarea>
             </label>
-            <p class="contact-privacy">Este formulario prepara un mensaje para que lo revises y lo envíes por WhatsApp. No guarda tus datos en este sitio. Evita incluir información confidencial.</p>
+            <p class="contact-privacy">Este formulario prepara un mensaje para que lo revises y lo envíes por WhatsApp. No guarda tus datos en este sitio. Evita incluir información confidencial. <a href="#privacidad">Lee el aviso de privacidad</a>.</p>
             <button class="button" type="submit">Preparar mensaje de WhatsApp <span aria-hidden="true">↗</span></button>
             <p class="contact-status" id="contact-status" role="status" aria-live="polite"></p>
           </form>
         </div>
+      </div>
+    </section>
+
+    <section class="privacy-section" id="privacidad">
+      <div class="container">
+        <article class="privacy-content">
+          <div class="eyebrow" data-content="privacy.eyebrow">Transparencia</div>
+          <h2 data-content="privacy.title">Aviso de privacidad</h2>
+          <p data-content="privacy.intro">Este aviso describe qué ocurre con la información que compartes al usar este sitio y su formulario de contacto.</p>
+          <p class="privacy-draft" data-content="privacy.draftNote">Aviso informativo inicial. Antes de utilizarlo como aviso formal, el propietario debe completar la identificación legal y domicilio del responsable del tratamiento, y revisar el texto conforme a la Ley Orgánica de Protección de Datos Personales.</p>
+
+          <h3>Responsable</h3>
+          <p data-content="privacy.responsible">El sitio opera bajo la marca Regulatorio Telecomunicaciones. La identidad legal y el domicilio del responsable del tratamiento aún deben ser completados por el propietario.</p>
+          <h3>Finalidad y datos solicitados</h3>
+          <p data-content="privacy.purpose">Si decides preparar y enviar una consulta, la información se utiliza únicamente para entender el servicio de interés y responderte por WhatsApp.</p>
+          <p data-content="privacy.data">El formulario solicita el servicio y el texto de tu consulta; el nombre es opcional. Evita incluir datos sensibles, credenciales u otra información confidencial.</p>
+          <h3>Envío y proveedores</h3>
+          <p data-content="privacy.handling">El formulario no envía la consulta a un servidor del sitio ni la guarda en una base de datos. El navegador prepara un mensaje y abre WhatsApp; tú decides si lo envías. Si lo envías, WhatsApp y su proveedor tratan la información conforme a sus propios términos y políticas.</p>
+          <p data-content="privacy.providers">El sitio está alojado en Netlify y carga tipografías desde Google Fonts. Estos proveedores pueden recibir datos técnicos de conexión cuando tu navegador solicita sus recursos, de acuerdo con sus políticas de privacidad.</p>
+          <h3>Conservación</h3>
+          <p data-content="privacy.retention">El sitio no conserva la información escrita en el formulario. Los mensajes que voluntariamente envíes por WhatsApp pueden quedar en tu dispositivo y en los sistemas de WhatsApp o del destinatario; su conservación se rige por esos servicios y por la gestión posterior de la consulta.</p>
+          <h3>Derechos y consultas</h3>
+          <p data-content="privacy.rights">Puedes solicitar información sobre el tratamiento de los datos que hayas compartido y ejercer los derechos que correspondan conforme a la normativa ecuatoriana. El canal de contacto actualmente disponible es WhatsApp; la identidad y los datos legales del responsable deben completarse antes de usar este aviso como documento formal.</p>
+          <div class="privacy-links">
+            <a href="https://www.gob.ec/regulaciones/ley-organica-proteccion-datos-personales" target="_blank" rel="noopener noreferrer">Ley Orgánica de Protección de Datos Personales ↗</a>
+            <a href="https://www.spdp.gob.ec/" target="_blank" rel="noopener noreferrer">Superintendencia de Protección de Datos Personales ↗</a>
+            <a class="whatsapp-link" data-message-content="privacy.whatsappMessage" data-message="Hola, deseo realizar una consulta sobre privacidad y tratamiento de datos personales." href="https://wa.me/593983022842" target="_blank" rel="noopener noreferrer">Consultar por WhatsApp ↗</a>
+          </div>
+          <p class="privacy-meta">Última actualización: <time id="privacy-updated"></time>. Este texto es informativo y no constituye asesoría legal.</p>
+        </article>
       </div>
     </section>
   </main>
@@ -732,12 +772,15 @@
     <div class="container footer-inner">
       <a class="brand" href="#inicio"><span class="brand-mark" aria-hidden="true"><svg class="illustration" viewBox="0 0 64 64"><use href="#icon-brand"></use></svg></span> <span data-content="brand.name">Regulatorio Telecomunicaciones</span></a>
       <p>© <span id="year"></span> <span data-content="brand.name">Regulatorio Telecomunicaciones</span> · <span data-content="footer.description">Servicios regulatorios</span></p>
-      <div class="footer-links"><a href="#tipos-tramite">Tipos de trámite</a><a href="#normativa">Normativa</a><a href="#servicios">Servicios</a><a href="#contacto">Contacto</a></div>
+      <div class="footer-links"><a href="#tipos-tramite">Tipos de trámite</a><a href="#normativa">Normativa</a><a href="#servicios">Servicios</a><a href="#contacto">Contacto</a><a href="#privacidad">Privacidad</a></div>
       <a class="admin-link" href="/admin/">Administrar sitio</a>
     </div>
   </footer>
   <script src="content-loader.js"></script>
   <script>
+    document.getElementById("privacy-updated").textContent =
+      new Intl.DateTimeFormat("es-EC", { dateStyle: "long" }).format(new Date());
+
     document.getElementById("whatsapp-contact-form").addEventListener("submit", (event) => {
       event.preventDefault();
       const form = event.currentTarget;
