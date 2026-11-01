@@ -1,0 +1,152 @@
+{
+  "brand": {
+    "name": "Regulatorio Telecomunicaciones"
+  },
+  "hero": {
+    "eyebrow": "Consultoría regulatoria · Ecuador",
+    "titlePrefix": "Conectamos tu operación con la",
+    "titleAccent": "regulación.",
+    "description": "Acompañamiento técnico y regulatorio para proveedores de telecomunicaciones. Menos incertidumbre en tus trámites, más foco en hacer crecer tu servicio.",
+    "note": "Asesoría clara, técnica y orientada a tu operación",
+    "primaryButton": "Consultar por WhatsApp",
+    "secondaryButton": "Explorar servicios",
+    "whatsappMessage": "Hola, quiero información sobre servicios regulatorios."
+  },
+  "serviceSection": {
+    "eyebrow": "Servicios regulatorios",
+    "title": "Soluciones para cada etapa de tu operación",
+    "description": "Un soporte integral que combina criterio de ingeniería, conocimiento regulatorio y atención a los detalles de cumplimiento."
+  },
+  "services": {
+    "engineering": {
+      "title": "Estudios de ingeniería",
+      "description": "Estudios técnicos para servicios y sistemas de telecomunicaciones, preparados de acuerdo con el alcance del proyecto y la normativa aplicable.",
+      "whatsappMessage": "Hola, quiero consultar sobre estudios de ingeniería regulatoria."
+    },
+    "sietel": {
+      "title": "Gestión SIETEL",
+      "description": "Preparación y control de reportes periódicos en el Sistema de Información y Estadística de los Servicios de Telecomunicaciones (SIETEL), administrado por ARCOTEL.",
+      "whatsappMessage": "Hola, quiero consultar sobre reportes y gestión SIETEL."
+    },
+    "fodetel": {
+      "title": "FODETEL",
+      "description": "Asesoría en gestiones vinculadas al Fondo para el Desarrollo de Telecomunicaciones en Áreas Rurales y Urbano Marginales y al objetivo de servicio universal.",
+      "whatsappMessage": "Hola, quiero consultar sobre gestiones FODETEL."
+    },
+    "contingency": {
+      "title": "Planes de contingencia",
+      "description": "Elaboración, actualización y preparación para la presentación anual del plan de contingencia exigido a los prestadores sujetos a la normativa de ARCOTEL.",
+      "whatsappMessage": "Hola, quiero consultar sobre planes de contingencia para telecomunicaciones."
+    },
+    "sisregi": {
+      "title": "Declaración de ingresos y pagos SISREGI",
+      "description": "Asesoría para preparar y presentar en línea las declaraciones de ingresos y pagos semestrales que correspondan ante ARCOTEL.",
+      "whatsappMessage": "Hola, quiero consultar sobre declaraciones de ingresos y pagos SISREGI."
+    },
+    "security": {
+      "title": "Auditorías de seguridad de información",
+      "description": "Evaluación de controles, identificación de brechas y recomendaciones priorizadas para mejorar la seguridad de la información.",
+      "whatsappMessage": "Hola, quiero consultar sobre auditorías de seguridad de información."
+    }
+  },
+  "engineeringSection": {
+    "eyebrow": "Estudios de ingeniería",
+    "title": "Diseño y documentación técnica por tipo de servicio",
+    "description": "Desarrollamos estudios y proyectos técnicos para estas áreas. El contenido y los entregables se definen según el servicio, las características de la red y el trámite aplicable."
+  },
+  "studies": {
+    "sai": {
+      "title": "Acceso a Internet (SAI)",
+      "description": "Diseño y dimensionamiento de redes para prestar acceso a Internet: topología, capacidad, equipos, infraestructura y área de cobertura o servicio, conforme al alcance del proyecto."
+    },
+    "avs": {
+      "title": "Audio y Video por Suscripción (AVS)",
+      "description": "Diseño de la infraestructura para recibir, procesar y distribuir señales de audio y video por suscripción, incluyendo cabecera, red de transporte y distribución, equipos y área de cobertura."
+    },
+    "radio": {
+      "title": "Sistemas de radiocomunicaciones VHF y UHF",
+      "description": "Estudios de estaciones y enlaces de radiocomunicación en VHF/UHF, con análisis de cobertura, ubicación, antenas, equipos y parámetros técnicos de operación aplicables."
+    },
+    "fm": {
+      "title": "Radiodifusión sonora FM",
+      "description": "Estudios técnicos para sistemas de radiodifusión FM, considerando estación transmisora, sistema radiante, parámetros de emisión y cobertura prevista según la planificación y regulación vigentes."
+    },
+    "tv": {
+      "title": "Televisión abierta VHF y UHF",
+      "description": "Diseño y análisis de sistemas de televisión abierta en VHF/UHF: estación, equipos de transmisión y antenas, parámetros técnicos y cobertura, de acuerdo con las condiciones aplicables al canal."
+    },
+    "satellite": {
+      "title": "Sistemas satelitales",
+      "description": "Estudios de estaciones terrenas y enlaces satelitales, incluyendo ubicación, antenas, equipos, banda y parámetros técnicos requeridos para el sistema y la gestión correspondiente."
+    },
+    "privateNetwork": {
+      "title": "Redes privadas",
+      "description": "Diseño de redes para comunicaciones de uso privado: arquitectura, cobertura, infraestructura, equipos y enlaces requeridos, considerando las autorizaciones que correspondan a las frecuencias utilizadas."
+    },
+    "mbda": {
+      "title": "Enlaces de Modulación Digital de Banda Ancha (MDBA)",
+      "description": "Estudios de ingeniería para enlaces MDBA, con revisión de la arquitectura del enlace, ubicación de estaciones, equipos, antenas y parámetros de operación, contrastados con la normativa técnica vigente de ARCOTEL."
+    }
+  },
+  "regulationSection": {
+    "eyebrow": "Marco regulatorio",
+    "title": "Normativa que conviene tener en el radar",
+    "description": "Identifica las fuentes oficiales que pueden incidir en tu servicio y confirma siempre la versión vigente y su aplicabilidad."
+  },
+  "tipsSection": {
+    "eyebrow": "Tips regulatorios",
+    "title": "Pequeños hábitos que evitan grandes apuros",
+    "description": "Una gestión preventiva de tus obligaciones puede marcar la diferencia. Estas recomendaciones son un punto de partida.",
+    "items": [
+      {
+        "tag": "01 · Calendario",
+        "title": "Anticípate a los vencimientos",
+        "description": "Mantén un calendario centralizado de reportes, pagos y renovaciones con responsables y recordatorios previos."
+      },
+      {
+        "tag": "02 · Evidencias",
+        "title": "Guarda trazabilidad de cada gestión",
+        "description": "Conserva comprobantes, versiones enviadas, acuses de recepción y comunicaciones asociadas a cada trámite."
+      },
+      {
+        "tag": "03 · Revisión",
+        "title": "Verifica la fuente antes de actuar",
+        "description": "Confirma formularios, requisitos y normativa en canales oficiales; evita basar decisiones en documentos desactualizados."
+      }
+    ]
+  },
+  "casesSection": {
+    "eyebrow": "Casos de éxito",
+    "title": "Resultados que empiezan con una buena gestión",
+    "description": "Ejemplos de retos en los que un acompañamiento especializado puede aportar orden y claridad.",
+    "items": [
+      {
+        "label": "Ingeniería",
+        "title": "Documentación técnica lista para revisión",
+        "description": "Consolidación de información de red y criterios técnicos en un expediente ordenado para facilitar su revisión y seguimiento."
+      },
+      {
+        "label": "Cumplimiento",
+        "title": "Obligaciones bajo control",
+        "description": "Organización de fechas, responsables y respaldos de reportes para dar más visibilidad al calendario regulatorio del operador."
+      },
+      {
+        "label": "Continuidad",
+        "title": "Preparación ante incidentes",
+        "description": "Definición de procedimientos y roles para mejorar la preparación del equipo ante interrupciones del servicio."
+      }
+    ],
+    "disclaimer": "Estos ejemplos son ilustrativos y no representan proyectos ejecutados ni resultados atribuibles a clientes. Reemplazar por casos verificables y autorizados antes de publicar como experiencia real."
+  },
+  "contact": {
+    "eyebrow": "Hablemos de tu proyecto",
+    "title": "¿Qué necesita tu operación?",
+    "description": "Cuéntanos qué servicio buscas y te ayudamos a identificar los siguientes pasos.",
+    "whatsappMessage": "Hola, quiero conversar sobre servicios regulatorios de telecomunicaciones.",
+    "whatsappNumber": "593983022842",
+    "phoneDisplay": "+593 98 302 2842"
+  },
+  "footer": {
+    "description": "Servicios regulatorios"
+  }
+}

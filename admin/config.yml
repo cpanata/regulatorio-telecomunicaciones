@@ -1,0 +1,201 @@
+backend:
+  name: git-gateway
+  branch: main
+
+publish_mode: simple
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "site_content"
+    label: "Contenido del sitio"
+    files:
+      - name: "main"
+        label: "Textos, servicios y estudios"
+        file: "content/site.json"
+        format: "json"
+        fields:
+          - label: "Marca"
+            name: "brand"
+            widget: "object"
+            fields:
+              - { label: "Nombre del sitio", name: "name", widget: "string" }
+          - label: "Portada"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Texto superior", name: "eyebrow", widget: "string" }
+              - { label: "Título (primera parte)", name: "titlePrefix", widget: "string" }
+              - { label: "Título destacado", name: "titleAccent", widget: "string" }
+              - { label: "Descripción", name: "description", widget: "text" }
+              - { label: "Frase de confianza", name: "note", widget: "string" }
+              - { label: "Botón principal", name: "primaryButton", widget: "string" }
+              - { label: "Botón secundario", name: "secondaryButton", widget: "string" }
+              - { label: "Mensaje precargado de WhatsApp", name: "whatsappMessage", widget: "string" }
+          - label: "Introducción a servicios"
+            name: "serviceSection"
+            widget: "object"
+            fields:
+              - { label: "Etiqueta", name: "eyebrow", widget: "string" }
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Descripción", name: "description", widget: "text" }
+          - label: "Tarjetas de servicios"
+            name: "services"
+            widget: "object"
+            fields:
+              - label: "Estudios de ingeniería"
+                name: "engineering"
+                widget: "object"
+                fields:
+                  - { label: "Título", name: "title", widget: "string" }
+                  - { label: "Descripción", name: "description", widget: "text" }
+                  - { label: "Mensaje precargado de WhatsApp", name: "whatsappMessage", widget: "string" }
+              - label: "SIETEL"
+                name: "sietel"
+                widget: "object"
+                fields:
+                  - { label: "Título", name: "title", widget: "string" }
+                  - { label: "Descripción", name: "description", widget: "text" }
+                  - { label: "Mensaje precargado de WhatsApp", name: "whatsappMessage", widget: "string" }
+              - label: "FODETEL"
+                name: "fodetel"
+                widget: "object"
+                fields:
+                  - { label: "Título", name: "title", widget: "string" }
+                  - { label: "Descripción", name: "description", widget: "text" }
+                  - { label: "Mensaje precargado de WhatsApp", name: "whatsappMessage", widget: "string" }
+              - label: "Planes de contingencia"
+                name: "contingency"
+                widget: "object"
+                fields:
+                  - { label: "Título", name: "title", widget: "string" }
+                  - { label: "Descripción", name: "description", widget: "text" }
+                  - { label: "Mensaje precargado de WhatsApp", name: "whatsappMessage", widget: "string" }
+              - label: "SISREGI"
+                name: "sisregi"
+                widget: "object"
+                fields:
+                  - { label: "Título", name: "title", widget: "string" }
+                  - { label: "Descripción", name: "description", widget: "text" }
+                  - { label: "Mensaje precargado de WhatsApp", name: "whatsappMessage", widget: "string" }
+              - label: "Seguridad de información"
+                name: "security"
+                widget: "object"
+                fields:
+                  - { label: "Título", name: "title", widget: "string" }
+                  - { label: "Descripción", name: "description", widget: "text" }
+                  - { label: "Mensaje precargado de WhatsApp", name: "whatsappMessage", widget: "string" }
+          - label: "Introducción a estudios de ingeniería"
+            name: "engineeringSection"
+            widget: "object"
+            fields:
+              - { label: "Etiqueta", name: "eyebrow", widget: "string" }
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Descripción", name: "description", widget: "text" }
+          - label: "Introducción a normativa"
+            name: "regulationSection"
+            widget: "object"
+            fields:
+              - { label: "Etiqueta", name: "eyebrow", widget: "string" }
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Descripción", name: "description", widget: "text" }
+          - label: "Estudios de ingeniería"
+            name: "studies"
+            widget: "object"
+            fields:
+              - label: "Acceso a Internet (SAI)"
+                name: "sai"
+                widget: "object"
+                fields:
+                  - { label: "Título", name: "title", widget: "string" }
+                  - { label: "Descripción", name: "description", widget: "text" }
+              - label: "Audio y Video por Suscripción (AVS)"
+                name: "avs"
+                widget: "object"
+                fields:
+                  - { label: "Título", name: "title", widget: "string" }
+                  - { label: "Descripción", name: "description", widget: "text" }
+              - label: "Radiocomunicaciones VHF/UHF"
+                name: "radio"
+                widget: "object"
+                fields:
+                  - { label: "Título", name: "title", widget: "string" }
+                  - { label: "Descripción", name: "description", widget: "text" }
+              - label: "Radiodifusión FM"
+                name: "fm"
+                widget: "object"
+                fields:
+                  - { label: "Título", name: "title", widget: "string" }
+                  - { label: "Descripción", name: "description", widget: "text" }
+              - label: "Televisión abierta"
+                name: "tv"
+                widget: "object"
+                fields:
+                  - { label: "Título", name: "title", widget: "string" }
+                  - { label: "Descripción", name: "description", widget: "text" }
+              - label: "Sistemas satelitales"
+                name: "satellite"
+                widget: "object"
+                fields:
+                  - { label: "Título", name: "title", widget: "string" }
+                  - { label: "Descripción", name: "description", widget: "text" }
+              - label: "Redes privadas"
+                name: "privateNetwork"
+                widget: "object"
+                fields:
+                  - { label: "Título", name: "title", widget: "string" }
+                  - { label: "Descripción", name: "description", widget: "text" }
+              - label: "Enlaces MDBA"
+                name: "mbda"
+                widget: "object"
+                fields:
+                  - { label: "Título", name: "title", widget: "string" }
+                  - { label: "Descripción", name: "description", widget: "text" }
+          - label: "Tips regulatorios"
+            name: "tipsSection"
+            widget: "object"
+            fields:
+              - { label: "Etiqueta", name: "eyebrow", widget: "string" }
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Descripción", name: "description", widget: "text" }
+              - label: "Consejos (mantener exactamente 3)"
+                name: "items"
+                widget: "list"
+                max: 3
+                min: 3
+                fields:
+                  - { label: "Etiqueta breve", name: "tag", widget: "string" }
+                  - { label: "Título", name: "title", widget: "string" }
+                  - { label: "Descripción", name: "description", widget: "text" }
+          - label: "Casos de éxito"
+            name: "casesSection"
+            widget: "object"
+            fields:
+              - { label: "Etiqueta", name: "eyebrow", widget: "string" }
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Descripción", name: "description", widget: "text" }
+              - label: "Casos (mantener exactamente 3)"
+                name: "items"
+                widget: "list"
+                max: 3
+                min: 3
+                fields:
+                  - { label: "Categoría", name: "label", widget: "string" }
+                  - { label: "Título", name: "title", widget: "string" }
+                  - { label: "Descripción", name: "description", widget: "text" }
+              - { label: "Aviso sobre casos ilustrativos", name: "disclaimer", widget: "text" }
+          - label: "Información de contacto"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Texto superior", name: "eyebrow", widget: "string" }
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Descripción", name: "description", widget: "text" }
+              - { label: "Mensaje precargado de WhatsApp", name: "whatsappMessage", widget: "string" }
+              - { label: "WhatsApp (código de país y número, solo dígitos)", name: "whatsappNumber", widget: "string" }
+              - { label: "Teléfono visible", name: "phoneDisplay", widget: "string" }
+          - label: "Pie de página"
+            name: "footer"
+            widget: "object"
+            fields:
+              - { label: "Descripción", name: "description", widget: "string" }

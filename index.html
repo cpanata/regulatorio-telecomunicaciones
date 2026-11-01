@@ -1,0 +1,707 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b172b">
+  <meta name="description" content="Asesoría y servicios regulatorios para el sector de telecomunicaciones en Ecuador: ingeniería, SIETEL, FODETEL, SISREGI, contingencias y seguridad de la información.">
+  <title>Regulatorio Telecomunicaciones | Servicios regulatorios</title>
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_EC">
+  <meta property="og:title" content="Regulatorio Telecomunicaciones | Servicios regulatorios">
+  <meta property="og:description" content="Asesoría técnica y regulatoria para operadores de telecomunicaciones en Ecuador. Estudios, cumplimiento y acompañamiento especializado.">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #102139;
+      --muted: #64748b;
+      --navy: #0b172b;
+      --navy-soft: #13243d;
+      --green: #b7f36b;
+      --green-dark: #193d26;
+      --paper: #f7f9f5;
+      --line: #e4e9e1;
+      --white: #fff;
+      --radius: 22px;
+      font-family: "DM Sans", sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    * { box-sizing: border-box; }
+    body { margin: 0; color: var(--ink); background: var(--paper); line-height: 1.65; }
+    a { color: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    .container { width: min(1120px, calc(100% - 48px)); margin-inline: auto; }
+    .skip-link { position: fixed; z-index: 20; top: 10px; left: 10px; transform: translateY(-160%); padding: 10px 15px; border-radius: 9px; background: var(--green); color: var(--navy); font-weight: 700; text-decoration: none; }
+    .skip-link:focus { transform: translateY(0); }
+    .eyebrow { color: #76a640; font-size: .76rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+    .section { padding: 100px 0; }
+    .section-heading { max-width: 650px; margin-bottom: 42px; }
+    .section-heading h2 { margin: 10px 0 14px; font: 800 clamp(2rem, 4vw, 3.2rem)/1.12 "Manrope", sans-serif; letter-spacing: -.045em; }
+    .section-heading p { max-width: 590px; margin: 0; color: var(--muted); font-size: 1.04rem; }
+
+    header { position: sticky; z-index: 10; top: 0; border-bottom: 1px solid rgb(255 255 255 / 9%); background: rgb(11 23 43 / 94%); backdrop-filter: blur(14px); }
+    .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 28px; color: var(--white); }
+    .brand { display: inline-flex; align-items: center; gap: 11px; color: var(--white); font: 800 1.08rem "Manrope", sans-serif; letter-spacing: -.04em; text-decoration: none; white-space: nowrap; }
+    .brand-mark { display: grid; width: 38px; height: 38px; flex: 0 0 auto; place-items: center; border: 1px solid rgb(183 243 107 / 35%); border-radius: 12px; background: linear-gradient(145deg, #d6ff9e, var(--green)); color: var(--navy); box-shadow: 0 5px 18px rgb(183 243 107 / 16%); }
+    .brand-mark svg { width: 27px; height: 27px; }
+    .icon-sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
+    .illustration { width: 38px; height: 38px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2; }
+    .nav-links { display: flex; align-items: center; gap: 25px; }
+    .nav-links a { color: #c4cfdd; font-size: .85rem; text-decoration: none; transition: color .2s; }
+    .nav-links a:hover { color: var(--green); }
+    .nav-cta { padding: 10px 16px; border: 1px solid rgb(183 243 107 / 55%); border-radius: 999px; color: var(--green) !important; font-weight: 700; }
+
+    .hero { position: relative; overflow: hidden; padding: 92px 0 100px; background: var(--navy); color: var(--white); }
+    .hero::before, .hero::after { position: absolute; width: 470px; height: 470px; border: 1px solid rgb(183 243 107 / 11%); border-radius: 50%; content: ""; pointer-events: none; }
+    .hero::before { top: -250px; right: -90px; box-shadow: 0 0 0 42px rgb(183 243 107 / 3%), 0 0 0 85px rgb(183 243 107 / 2%); }
+    .hero::after { right: 12%; bottom: -450px; width: 570px; height: 570px; }
+    .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.15fr .85fr; align-items: center; gap: 65px; }
+    .hero .eyebrow { color: var(--green); }
+    .hero h1 { max-width: 720px; margin: 17px 0 22px; font: 800 clamp(2.8rem, 6vw, 5rem)/1.04 "Manrope", sans-serif; letter-spacing: -.065em; }
+    .hero h1 span { color: var(--green); }
+    .hero-copy { max-width: 600px; margin: 0; color: #b7c3d3; font-size: 1.12rem; }
+    .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin-top: 32px; }
+    .button { display: inline-flex; min-height: 49px; align-items: center; justify-content: center; gap: 9px; padding: 0 20px; border: 1px solid transparent; border-radius: 999px; font-size: .9rem; font-weight: 700; text-decoration: none; transition: transform .2s, background .2s; }
+    .button:hover { transform: translateY(-2px); }
+    .button-primary { background: var(--green); color: var(--navy); }
+    .button-outline { border-color: #44546a; color: var(--white); }
+    .hero-note { display: flex; align-items: center; gap: 10px; margin-top: 30px; color: #9cabbc; font-size: .83rem; }
+    .hero-note span { display: grid; width: 26px; height: 26px; place-items: center; border-radius: 50%; background: #1c3048; color: var(--green); }
+    .hero-card { position: relative; padding: 29px; border: 1px solid rgb(255 255 255 / 12%); border-radius: 26px; background: linear-gradient(145deg, rgb(255 255 255 / 9%), rgb(255 255 255 / 3%)); box-shadow: 0 24px 70px rgb(0 0 0 / 20%); }
+    .hero-card-label { display: flex; align-items: center; justify-content: space-between; color: #c1ccda; font-size: .8rem; }
+    .status { display: inline-flex; align-items: center; gap: 7px; color: var(--green); }
+    .status::before { width: 7px; height: 7px; border-radius: 50%; background: var(--green); content: ""; box-shadow: 0 0 12px var(--green); }
+    .hero-card h2 { margin: 30px 0 22px; font: 700 1.48rem "Manrope", sans-serif; }
+    .check-list { display: grid; gap: 16px; margin: 0; padding: 0; list-style: none; }
+    .check-list li { display: flex; align-items: center; gap: 12px; color: #d3dce6; font-size: .92rem; }
+    .check { display: grid; width: 24px; height: 24px; flex: 0 0 auto; place-items: center; border-radius: 50%; background: rgb(183 243 107 / 13%); color: var(--green); font-size: .75rem; font-weight: 700; }
+    .card-foot { margin-top: 25px; padding-top: 18px; border-top: 1px solid rgb(255 255 255 / 12%); color: #8d9daf; font-size: .79rem; }
+
+    .trust-strip { border-bottom: 1px solid var(--line); background: var(--white); }
+    .trust-items { display: grid; grid-template-columns: repeat(4, 1fr); }
+    .trust-item { display: flex; min-height: 105px; align-items: center; gap: 13px; padding: 18px 22px; border-right: 1px solid var(--line); }
+    .trust-item:first-child { padding-left: 0; }
+    .trust-item:last-child { border: 0; }
+    .trust-icon { display: grid; width: 42px; height: 42px; flex: 0 0 auto; place-items: center; border-radius: 13px; background: #eff6e7; color: #5b8b2a; }
+    .trust-icon .illustration { width: 26px; height: 26px; stroke-width: 1.8; }
+    .trust-item strong { display: block; font-size: .85rem; }
+    .trust-item small { color: var(--muted); font-size: .75rem; }
+
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 17px; }
+    .service-jump { display: flex; flex-wrap: wrap; gap: 9px; margin: -20px 0 28px; }
+    .service-jump a { padding: 8px 13px; border: 1px solid var(--line); border-radius: 999px; background: var(--white); color: #526174; font-size: .79rem; font-weight: 600; text-decoration: none; transition: border-color .2s, color .2s, background .2s; }
+    .service-jump a:hover { border-color: #b8d28f; background: #eff6e7; color: #355a1d; }
+    .service-card { min-height: 223px; padding: 25px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--white); transition: transform .2s, box-shadow .2s, border-color .2s; }
+    .service-card:hover { transform: translateY(-4px); border-color: #c9dfa9; box-shadow: 0 14px 35px rgb(16 33 57 / 7%); }
+    .service-icon { display: grid; width: 54px; height: 54px; place-items: center; border: 1px solid rgb(16 33 57 / 5%); border-radius: 17px; background: linear-gradient(145deg, #f3f8e9, #e8f1dc); color: #58802d; box-shadow: inset 0 1px rgb(255 255 255 / 90%); }
+    .service-icon .illustration { width: 35px; height: 35px; }
+    .service-icon-blue { background: linear-gradient(145deg, #e9f4ff, #dceafa); color: #3673a8; }
+    .service-icon-gold { background: linear-gradient(145deg, #fff5df, #f7e9c8); color: #a2721d; }
+    .service-icon-violet { background: linear-gradient(145deg, #f2eaff, #e8def8); color: #7152a6; }
+    .service-icon-teal { background: linear-gradient(145deg, #e3f7f3, #d2eee8); color: #318578; }
+    .service-icon-rose { background: linear-gradient(145deg, #ffeded, #f8dddd); color: #ad5960; }
+    .service-card h3 { margin: 18px 0 8px; font: 700 1.04rem "Manrope", sans-serif; }
+    .service-card p { margin: 0; color: var(--muted); font-size: .88rem; line-height: 1.65; }
+    .service-link { display: inline-flex; align-items: center; gap: 7px; margin-top: 15px; color: #58802d; font-size: .84rem; font-weight: 700; text-decoration: none; }
+    .service-link:hover { color: #355a1d; }
+    .service-consult { display: inline-flex; align-items: center; gap: 7px; margin-top: 15px; color: #426426; font-size: .82rem; font-weight: 700; text-decoration: none; }
+    .service-consult .illustration { width: 18px; height: 18px; }
+    .service-consult:hover { color: #193d26; text-decoration: underline; text-underline-offset: 3px; }
+    .service-details { margin-top: 17px; border-top: 1px solid var(--line); padding-top: 12px; }
+    .service-details summary, .engineering-details summary { color: #426426; cursor: pointer; font-size: .82rem; font-weight: 700; }
+    .service-details p, .engineering-details p { margin: 11px 0 7px; color: #526174; font-size: .82rem; }
+    .service-details ul, .engineering-details ul { display: grid; gap: 5px; margin: 8px 0; padding-left: 19px; color: #526174; font-size: .81rem; }
+    .service-details a, .engineering-details a { color: #426426; font-weight: 700; }
+
+    .engineering { padding-top: 0; }
+    .engineering-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; }
+    .engineering-card { padding: 16px; border: 1px solid var(--line); border-radius: 20px; background: var(--white); transition: transform .2s, box-shadow .2s, border-color .2s; }
+    .engineering-card:hover { transform: translateY(-3px); border-color: #c9dfa9; box-shadow: 0 12px 30px rgb(16 33 57 / 7%); }
+    .engineering-visual { position: relative; display: grid; height: 126px; overflow: hidden; place-items: center; margin-bottom: 19px; border-radius: 14px; background: linear-gradient(135deg, #eaf5e2, #f4f7ed); color: #58802d; }
+    .engineering-visual::before, .engineering-visual::after { position: absolute; border: 1px solid currentColor; border-radius: 50%; content: ""; opacity: .14; }
+    .engineering-visual::before { width: 150px; height: 150px; }
+    .engineering-visual::after { width: 100px; height: 100px; }
+    .engineering-visual .illustration { position: relative; z-index: 1; width: 68px; height: 68px; stroke-width: 1.6; filter: drop-shadow(0 5px 5px rgb(16 33 57 / 10%)); }
+    .visual-blue { background: linear-gradient(135deg, #e8f4ff, #f0f7ff); color: #3879b1; }
+    .visual-purple { background: linear-gradient(135deg, #f0e9ff, #f8f4ff); color: #7658aa; }
+    .visual-teal { background: linear-gradient(135deg, #e2f6f1, #f2fbf8); color: #34877b; }
+    .visual-orange { background: linear-gradient(135deg, #fff0dc, #fff8ec); color: #b87930; }
+    .visual-cyan { background: linear-gradient(135deg, #e2f5f8, #f2fafb); color: #338595; }
+    .visual-rose { background: linear-gradient(135deg, #fae9ed, #fff5f6); color: #a95f72; }
+    .visual-indigo { background: linear-gradient(135deg, #e9edff, #f5f6ff); color: #596da9; }
+    .engineering-card h3 { margin: 0 0 9px; font: 700 1rem "Manrope", sans-serif; }
+    .engineering-card p { margin: 0; color: var(--muted); font-size: .87rem; }
+    .engineering-details { margin-top: 14px; padding-top: 11px; border-top: 1px solid var(--line); }
+    .engineering-note { margin: 19px 0 0; padding: 15px 17px; border-left: 3px solid #8bb653; background: #eef2ec; color: #566477; font-size: .82rem; }
+    .engineering-note a { color: #426426; font-weight: 700; }
+
+    .procedure-report { background: #eef2ec; }
+    .report-table-wrap { overflow-x: auto; border: 1px solid #dfe6dc; border-radius: 16px; background: var(--white); }
+    .report-table { width: 100%; border-collapse: collapse; font-size: .85rem; }
+    .report-table th, .report-table td { min-width: 150px; padding: 15px 17px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+    .report-table th { background: #f7f9f5; font: 700 .8rem "Manrope", sans-serif; }
+    .report-table tr:last-child td { border-bottom: 0; }
+    .report-table td:first-child { color: #315522; font-weight: 700; }
+    .report-note { margin: 17px 0 0; color: #566477; font-size: .82rem; }
+    .report-sources { display: flex; flex-wrap: wrap; gap: 10px 20px; margin-top: 17px; }
+    .report-sources a { color: #426426; font-size: .82rem; font-weight: 700; }
+
+    .regulation { background: #eef2ec; }
+    .reg-grid { display: grid; grid-template-columns: .8fr 1.2fr; align-items: start; gap: 70px; }
+    .reg-intro { position: sticky; top: 110px; }
+    .reg-intro h2 { margin: 10px 0 15px; font: 800 clamp(2rem, 4vw, 3rem)/1.13 "Manrope", sans-serif; letter-spacing: -.05em; }
+    .reg-intro p { margin: 0; color: var(--muted); }
+    .source-note { margin-top: 24px !important; padding: 13px 15px; border-left: 3px solid #8bb653; background: rgb(255 255 255 / 58%); font-size: .79rem; }
+    .reg-list { display: grid; gap: 11px; }
+    .reg-item { display: grid; grid-template-columns: 42px 1fr auto; align-items: center; gap: 15px; padding: 19px; border: 1px solid #dfe6dc; border-radius: 16px; background: rgb(255 255 255 / 75%); text-decoration: none; transition: background .2s, border-color .2s; }
+    .reg-item:hover { border-color: #b8d28f; background: var(--white); }
+    .reg-number { color: #83a953; font: 800 .85rem "Manrope", sans-serif; }
+    .reg-item strong { display: block; font: 700 .91rem "Manrope", sans-serif; }
+    .reg-item small { display: block; margin-top: 3px; color: var(--muted); font-size: .79rem; }
+    .external { color: #81916f; font-size: 1.1rem; }
+
+    .tips-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .tip-card { padding: 24px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--white); }
+    .tip-tag { color: #6a973d; font-size: .72rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; }
+    .tip-card h3 { margin: 13px 0 9px; font: 700 1.08rem "Manrope", sans-serif; }
+    .tip-card p { margin: 0; color: var(--muted); font-size: .88rem; }
+
+    .cases { background: var(--navy); color: var(--white); }
+    .cases .eyebrow { color: var(--green); }
+    .cases .section-heading p { color: #aab8ca; }
+    .cases-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 17px; }
+    .case-card { padding: 25px; border: 1px solid rgb(255 255 255 / 12%); border-radius: var(--radius); background: var(--navy-soft); }
+    .case-label { color: var(--green); font-size: .75rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    .case-card h3 { margin: 13px 0 10px; font: 700 1.1rem "Manrope", sans-serif; }
+    .case-card p { margin: 0; color: #b0bdcd; font-size: .87rem; }
+    .case-disclaimer { margin: 21px 0 0; color: #8899ae; font-size: .78rem; }
+
+    .contact { padding: 83px 0; }
+    .contact-box { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 30px; padding: 42px; border-radius: 28px; background: var(--green); }
+    .contact-box .eyebrow { color: #426426; }
+    .contact-box h2 { margin: 7px 0 8px; font: 800 clamp(1.8rem, 4vw, 2.75rem)/1.12 "Manrope", sans-serif; letter-spacing: -.05em; }
+    .contact-box p { max-width: 550px; margin: 0; color: #36502b; }
+    .contact-box .button { background: var(--navy); color: var(--white); white-space: nowrap; }
+    .contact-help { grid-column: 1 / -1; margin-top: -14px !important; font-size: .76rem; opacity: .8; }
+    footer { padding: 27px 0; background: #071222; color: #a2afbf; }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    footer .brand { font-size: .95rem; }
+    footer p { margin: 0; font-size: .76rem; }
+    .footer-links { display: flex; gap: 18px; }
+    .footer-links a { color: #bac5d2; font-size: .78rem; text-decoration: none; }
+    .footer-links a:hover { color: var(--green); }
+    .admin-link { color: #bac5d2; font-size: .72rem; text-decoration: none; }
+    .admin-link:hover { color: var(--green); }
+    :focus-visible { outline: 3px solid #7da64e; outline-offset: 4px; }
+
+    @media (max-width: 900px) {
+      .nav-links { gap: 14px; }
+      .nav-links a:not(.nav-cta) { display: none; }
+      .hero-grid { grid-template-columns: 1fr .8fr; gap: 32px; }
+      .trust-item { padding-inline: 14px; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .engineering-grid { grid-template-columns: repeat(2, 1fr); }
+      .reg-grid { gap: 35px; }
+    }
+    @media (max-width: 650px) {
+      .container { width: min(100% - 34px, 520px); }
+      .section { padding: 72px 0; }
+      .nav { min-height: 67px; }
+      .nav-cta { padding: 8px 12px; font-size: .77rem !important; }
+      .hero { padding: 70px 0 68px; }
+      .hero-grid, .reg-grid { grid-template-columns: 1fr; }
+      .hero-grid { gap: 39px; }
+      .hero h1 { font-size: clamp(2.7rem, 13vw, 4rem); }
+      .hero-card { padding: 23px; }
+      .trust-items { grid-template-columns: repeat(2, 1fr); }
+      .trust-item { min-height: 85px; border-bottom: 1px solid var(--line); }
+      .trust-item:nth-child(2) { border-right: 0; }
+      .trust-item:nth-child(3) { border-bottom: 0; }
+      .trust-item:last-child { border-bottom: 0; }
+      .trust-item:first-child { padding-left: 14px; }
+      .services-grid, .engineering-grid, .tips-grid, .cases-grid { grid-template-columns: 1fr; }
+      .service-card { min-height: auto; }
+      .reg-intro { position: static; }
+      .reg-item { grid-template-columns: 31px 1fr auto; gap: 10px; padding: 15px 13px; }
+      .contact { padding: 65px 0; }
+      .contact-box { grid-template-columns: 1fr; padding: 29px 24px; }
+      .contact-box .button { justify-self: start; }
+      .contact-help { margin-top: -15px !important; }
+      .footer-inner { flex-wrap: wrap; }
+      .footer-links { order: 3; width: 100%; flex-wrap: wrap; }
+      .admin-link { order: 4; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <svg class="icon-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="icon-brand" viewBox="0 0 64 64">
+      <path d="M12 17h17c10 0 16 6 16 15s-6 15-16 15H12V17Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
+      <path d="m34 45 9 9 13-18M39 9l8 8m-8 0 8-8" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-engineering" viewBox="0 0 64 64">
+      <path d="M15 10h25l10 10v34H15zM40 10v12h10M22 31h20M22 39h20M22 47h12"/>
+      <path d="m9 49 10-10 8 7 11-13 9 8"/>
+    </symbol>
+    <symbol id="icon-sietel" viewBox="0 0 64 64">
+      <path d="M13 11h25l13 13v29H13zM38 11v14h13M21 34h10M21 42h6"/>
+      <path d="M35 44v-7m8 7V28m8 16V33"/>
+    </symbol>
+    <symbol id="icon-fodetel" viewBox="0 0 64 64">
+      <path d="M32 54S13 36 13 24a19 19 0 1 1 38 0c0 12-19 30-19 30Z"/>
+      <circle cx="32" cy="24" r="7"/>
+      <path d="M7 16a28 28 0 0 1 8-9m42 9a28 28 0 0 0-8-9"/>
+    </symbol>
+    <symbol id="icon-contingency" viewBox="0 0 64 64">
+      <path d="M32 7 52 15v14c0 13-8 22-20 29C20 51 12 42 12 29V15z"/>
+      <path d="m22 32 7 7 14-15"/>
+      <path d="M32 17v7m0 16v4"/>
+    </symbol>
+    <symbol id="icon-sisregi" viewBox="0 0 64 64">
+      <path d="M14 9h25l12 12v34H14zM39 9v13h12M21 32h22M21 40h22"/>
+      <path d="M27 48h10m-5-5v10"/>
+    </symbol>
+    <symbol id="icon-security" viewBox="0 0 64 64">
+      <path d="M32 7 52 15v14c0 13-8 22-20 29C20 51 12 42 12 29V15z"/>
+      <rect x="24" y="29" width="16" height="13" rx="3"/>
+      <path d="M28 29v-4a4 4 0 0 1 8 0v4m-4 5v3"/>
+    </symbol>
+    <symbol id="icon-network" viewBox="0 0 64 64">
+      <circle cx="32" cy="32" r="7"/><circle cx="14" cy="15" r="4"/><circle cx="50" cy="15" r="4"/><circle cx="14" cy="49" r="4"/><circle cx="50" cy="49" r="4"/>
+      <path d="m27 27-10-9m20 9 10-9M27 37l-10 9m20-9 10 9"/>
+      <path d="M32 25V10"/>
+    </symbol>
+    <symbol id="icon-internet" viewBox="0 0 64 64">
+      <circle cx="32" cy="32" r="24"/>
+      <path d="M8 32h48M32 8a37 37 0 0 1 0 48M32 8a37 37 0 0 0 0 48"/>
+      <path d="M16 19c9 7 23 7 32 0m-32 26c9-7 23-7 32 0"/>
+    </symbol>
+    <symbol id="icon-avs" viewBox="0 0 64 64">
+      <rect x="8" y="12" width="48" height="34" rx="5"/>
+      <path d="M25 54h14m-7-8v8"/>
+      <path d="m28 22 13 7-13 8z"/>
+    </symbol>
+    <symbol id="icon-radio" viewBox="0 0 64 64">
+      <path d="M32 13v43M18 56h28M24 33l8-20 8 20M21 27h22"/>
+      <path d="M15 20a24 24 0 0 0 0 25m34-25a24 24 0 0 1 0 25"/>
+      <path d="M7 13a35 35 0 0 0 0 39m50-39a35 35 0 0 1 0 39"/>
+      <circle cx="32" cy="13" r="3" fill="currentColor"/>
+    </symbol>
+    <symbol id="icon-fm" viewBox="0 0 64 64">
+      <path d="m32 10 18 45H14zM23 33h18M20 42h24M27 55l5-45 5 45"/>
+      <path d="M16 17a22 22 0 0 0-7 16m39-16a22 22 0 0 1 7 16"/>
+      <circle cx="32" cy="10" r="3" fill="currentColor"/>
+    </symbol>
+    <symbol id="icon-tv" viewBox="0 0 64 64">
+      <rect x="8" y="21" width="48" height="32" rx="4"/>
+      <path d="m23 10 9 10 9-10M18 45l10-13 7 9 6-7 7 11M20 58h24"/>
+      <circle cx="48" cy="27" r="2" fill="currentColor"/>
+    </symbol>
+    <symbol id="icon-satellite" viewBox="0 0 64 64">
+      <path d="M17 29a22 22 0 0 0 18 18l7-7a17 17 0 0 1-13-13z"/>
+      <path d="m37 15 12 12M33 19l11-11 13 13-11 11M18 45l-8 8m4-13-5 5m15 4-5 8"/>
+      <path d="M45 8a16 16 0 0 1 11 11M47 1a25 25 0 0 1 16 16"/>
+    </symbol>
+    <symbol id="icon-private-network" viewBox="0 0 64 64">
+      <rect x="8" y="10" width="19" height="17" rx="3"/><rect x="37" y="10" width="19" height="17" rx="3"/>
+      <rect x="22" y="38" width="20" height="17" rx="3"/>
+      <path d="M17 27v5h30v-5M32 32v6M13 18h9m19 0h9m-15 25h8"/>
+    </symbol>
+    <symbol id="icon-mbda" viewBox="0 0 64 64">
+      <path d="M10 50h12l8-31 8 31h16M16 50V35m32 15V35M9 55h46"/>
+      <path d="M17 25a21 21 0 0 1 30 0M22 30a14 14 0 0 1 20 0M27 35a7 7 0 0 1 10 0"/>
+      <circle cx="32" cy="39" r="2" fill="currentColor"/>
+    </symbol>
+    <symbol id="icon-chat" viewBox="0 0 64 64">
+      <path d="M53 30a21 21 0 0 1-22 21 24 24 0 0 1-10-2L10 53l4-11a21 21 0 1 1 39-12Z"/>
+      <path d="M23 27c2 6 6 10 12 12m-9-15 3 4-3 3m12 4 3-3 4 3"/>
+    </symbol>
+  </svg>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header>
+    <nav class="nav container" aria-label="Navegación principal">
+      <a class="brand" href="#inicio" aria-label="Regulatorio Telecomunicaciones, inicio">
+        <span class="brand-mark" aria-hidden="true"><svg class="illustration" viewBox="0 0 64 64"><use href="#icon-brand"></use></svg></span> <span data-content="brand.name">Regulatorio Telecomunicaciones</span>
+      </a>
+      <div class="nav-links">
+        <a href="#servicios">Servicios</a>
+        <a href="#tipos-tramite">Trámites</a>
+        <a href="#normativa">Normativa</a>
+        <a href="#consejos">Tips</a>
+        <a class="nav-cta" href="#contacto">Hablemos <span aria-hidden="true">↗</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow" data-content="hero.eyebrow">Consultoría regulatoria · Ecuador</div>
+          <h1><span class="hero-title-prefix" data-content="hero.titlePrefix">Conectamos tu operación con la</span> <span class="hero-title-accent" data-content="hero.titleAccent">regulación.</span></h1>
+          <p class="hero-copy" data-content="hero.description">Acompañamiento técnico y regulatorio para proveedores de telecomunicaciones. Menos incertidumbre en tus trámites, más foco en hacer crecer tu servicio.</p>
+          <div class="hero-actions">
+            <a class="button button-primary whatsapp-link" href="https://wa.me/?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20servicios%20regulatorios." data-message-content="hero.whatsappMessage" data-message="Hola, quiero información sobre servicios regulatorios." target="_blank" rel="noopener noreferrer"><span data-content="hero.primaryButton">Consultar por WhatsApp</span> <span aria-hidden="true">↗</span></a>
+            <a class="button button-outline" href="#servicios"><span data-content="hero.secondaryButton">Explorar servicios</span> <span aria-hidden="true">↓</span></a>
+          </div>
+          <div class="hero-note"><span aria-hidden="true">✓</span> <span data-content="hero.note">Asesoría clara, técnica y orientada a tu operación</span></div>
+        </div>
+        <aside class="hero-card" aria-label="Áreas de acompañamiento">
+          <div class="hero-card-label"><span>Tu operación, en regla</span><span class="status">Acompañamiento experto</span></div>
+          <h2>De la planificación al cumplimiento</h2>
+          <ul class="check-list">
+            <li><span class="check" aria-hidden="true">✓</span> Ingeniería y documentación técnica</li>
+            <li><span class="check" aria-hidden="true">✓</span> Gestión en sistemas regulatorios</li>
+            <li><span class="check" aria-hidden="true">✓</span> Continuidad y seguridad de información</li>
+          </ul>
+          <div class="card-foot">Alcance y entregables definidos según las necesidades de cada proyecto.</div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="trust-strip" aria-label="Áreas de experiencia">
+      <div class="container trust-items">
+        <div class="trust-item"><span class="trust-icon" aria-hidden="true"><svg class="illustration" viewBox="0 0 64 64"><use href="#icon-engineering"></use></svg></span><div><strong>Ingeniería</strong><small>Estudios y soporte técnico</small></div></div>
+        <div class="trust-item"><span class="trust-icon" aria-hidden="true"><svg class="illustration" viewBox="0 0 64 64"><use href="#icon-sietel"></use></svg></span><div><strong>Regulación</strong><small>Trámites y obligaciones</small></div></div>
+        <div class="trust-item"><span class="trust-icon" aria-hidden="true"><svg class="illustration" viewBox="0 0 64 64"><use href="#icon-contingency"></use></svg></span><div><strong>Continuidad</strong><small>Preparación y respuesta</small></div></div>
+        <div class="trust-item"><span class="trust-icon" aria-hidden="true"><svg class="illustration" viewBox="0 0 64 64"><use href="#icon-security"></use></svg></span><div><strong>Seguridad</strong><small>Auditoría y mejoras</small></div></div>
+      </div>
+    </section>
+
+    <section class="section" id="servicios">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow" data-content="serviceSection.eyebrow">Servicios regulatorios</div>
+          <h2 data-content="serviceSection.title">Soluciones para cada etapa de tu operación</h2>
+          <p data-content="serviceSection.description">Un soporte integral que combina criterio de ingeniería, conocimiento regulatorio y atención a los detalles de cumplimiento.</p>
+        </div>
+        <nav class="service-jump" aria-label="Acceso rápido a los servicios">
+          <a href="#servicio-ingenieria">Estudios</a>
+          <a href="#servicio-sietel">SIETEL</a>
+          <a href="#servicio-fodetel">FODETEL</a>
+          <a href="#servicio-contingencia">Contingencias</a>
+          <a href="#servicio-sisregi">SISREGI</a>
+          <a href="#servicio-seguridad">Seguridad</a>
+        </nav>
+        <div class="services-grid">
+          <article class="service-card" id="servicio-ingenieria">
+            <div class="service-icon service-icon-blue" aria-hidden="true"><svg class="illustration" viewBox="0 0 64 64"><use href="#icon-engineering"></use></svg></div>
+            <h3 data-content="services.engineering.title">Estudios de ingeniería</h3>
+            <p data-content="services.engineering.description">Estudios técnicos para servicios y sistemas de telecomunicaciones, preparados de acuerdo con el alcance del proyecto y la normativa aplicable.</p>
+            <a class="service-link" href="#estudios-ingenieria">Ver tipos de estudios <span aria-hidden="true">↓</span></a>
+            <a class="service-consult whatsapp-link" data-message-content="services.engineering.whatsappMessage" data-message="Hola, quiero consultar sobre estudios de ingeniería regulatoria." href="https://wa.me/593983022842" target="_blank" rel="noopener noreferrer"><svg class="illustration" viewBox="0 0 64 64" aria-hidden="true"><use href="#icon-chat"></use></svg> Consultar este servicio</a>
+            <details class="service-details">
+              <summary>¿Qué trámite habilitante corresponde?</summary>
+              <p>El estudio técnico no es por sí mismo un permiso. El instrumento depende del servicio (por ejemplo, registro SAI, título para AVS, concesión de radiodifusión o título de red privada) y de si se requiere usar frecuencias.</p>
+              <a href="#estudios-ingenieria">Ver trámite y requisitos por estudio</a>
+            </details>
+          </article>
+          <article class="service-card" id="servicio-sietel">
+            <div class="service-icon service-icon-teal" aria-hidden="true"><svg class="illustration" viewBox="0 0 64 64"><use href="#icon-sietel"></use></svg></div>
+            <h3 data-content="services.sietel.title">Gestión SIETEL</h3>
+            <p data-content="services.sietel.description">Preparación y control de reportes periódicos en el Sistema de Información y Estadística de los Servicios de Telecomunicaciones (SIETEL), administrado por ARCOTEL.</p>
+            <a class="service-consult whatsapp-link" data-message-content="services.sietel.whatsappMessage" data-message="Hola, quiero consultar sobre reportes y gestión SIETEL." href="https://wa.me/593983022842" target="_blank" rel="noopener noreferrer"><svg class="illustration" viewBox="0 0 64 64" aria-hidden="true"><use href="#icon-chat"></use></svg> Consultar este servicio</a>
+            <details class="service-details">
+              <summary>Función, alcance y cumplimiento</summary>
+              <p><strong>¿Qué es?</strong> SIETEL es el sistema oficial de ARCOTEL para que los prestadores sujetos a reporte entreguen información periódica estandarizada sobre sus servicios.</p>
+              <p><strong>Servicios informados por ARCOTEL:</strong> Servicio de Acceso a Internet (SAI), Servicio Portador (SPT) y Audio y Video por Suscripción (AVS). Verifica las obligaciones aplicables a tu título y servicio.</p>
+              <p><strong>Información reportada:</strong> según el formulario y período, puede incluir datos de abonados o usuarios, tarifas, ingresos, costos e indicadores de calidad del servicio.</p>
+              <p><strong>Periodicidad y plazo:</strong> los reportes se presentan dentro de los primeros 15 días calendario del mes, trimestre o semestre concluido, según la periodicidad asignada al reporte.</p>
+              <p><strong>Importante:</strong> la falta de entrega puede dar lugar a medidas administrativas sancionadoras. Revisa las instrucciones u oficios de ARCOTEL y conserva la constancia de envío. SIETEL es un sistema de reporte, no un título habilitante ni un trámite para obtener frecuencias.</p>
+              <ul><li>Validar servicio, formulario y período que corresponden al operador.</li><li>Consolidar información fuente y comprobar consistencia antes de reportar.</li><li>Presentar el reporte dentro del plazo aplicable y archivar el respaldo de recepción.</li></ul>
+              <a href="https://apc.arcotel.gob.ec/sietel1/index.aspx" target="_blank" rel="noopener noreferrer">Ingresar al portal SIETEL de ARCOTEL ↗</a>
+              <p>Consultas publicadas por ARCOTEL: SAI — servicio.internet@arcotel.gob.ec; SPT — servicio.portador@arcotel.gob.ec; AVS — audioyvideo@arcotel.gob.ec.</p>
+            </details>
+          </article>
+          <article class="service-card" id="servicio-fodetel">
+            <div class="service-icon service-icon-gold" aria-hidden="true"><svg class="illustration" viewBox="0 0 64 64"><use href="#icon-fodetel"></use></svg></div>
+            <h3 data-content="services.fodetel.title">FODETEL</h3>
+            <p data-content="services.fodetel.description">Asesoría en gestiones vinculadas al Fondo para el Desarrollo de Telecomunicaciones en Áreas Rurales y Urbano Marginales y al objetivo de servicio universal.</p>
+            <a class="service-consult whatsapp-link" data-message-content="services.fodetel.whatsappMessage" data-message="Hola, quiero consultar sobre gestiones FODETEL." href="https://wa.me/593983022842" target="_blank" rel="noopener noreferrer"><svg class="illustration" viewBox="0 0 64 64" aria-hidden="true"><use href="#icon-chat"></use></svg> Consultar este servicio</a>
+            <details class="service-details">
+              <summary>Propósito, alcance y gestiones</summary>
+              <p><strong>¿Qué es?</strong> El FODETEL es el Fondo para el Desarrollo de Telecomunicaciones en Áreas Rurales y Urbano Marginales. Su propósito es apoyar el acceso universal y asequible a servicios de telecomunicaciones, con atención a zonas rurales y urbano-marginales del Ecuador.</p>
+              <p><strong>Marco:</strong> su origen se vincula al artículo 58 de la Ley para la Transformación Económica del Ecuador y al Reglamento para la Administración del Fondo. La aplicación actual debe leerse junto con la Ley Orgánica de Telecomunicaciones y la normativa vigente; las referencias históricas no sustituyen la regulación actual.</p>
+              <p><strong>Alcance:</strong> históricamente se ha relacionado con proyectos de conectividad e infraestructura, como telecentros comunitarios y servicios que apoyan teleeducación o telemedicina. La existencia, financiación y requisitos de cada iniciativa dependen de programas y procedimientos vigentes.</p>
+              <p><strong>Gestión actual:</strong> el Ministerio de Telecomunicaciones informa que los trámites de FODETEL deben gestionarse directamente ante ARCOTEL o desde su portal. Según el caso, puede tratarse de una gestión de obligaciones del operador o de un requerimiento relacionado con un proyecto; no son el mismo trámite ni constituyen automáticamente una nueva concesión o permiso.</p>
+              <ul><li>Identificar si la consulta corresponde a una obligación del prestador, a un proyecto o a un requerimiento de ARCOTEL.</li><li>Reunir título habilitante, oficio o convocatoria, período, formularios y respaldos técnicos o financieros aplicables.</li><li>Confirmar en ARCOTEL el procedimiento, los plazos, formularios y criterios vigentes antes de presentar la gestión.</li></ul>
+              <a href="https://www.arcotel.gob.ec/wp-content/uploads/2015/12/fondo-para-el-desarrollo-de-telecomunicaciones-rurales.pdf" target="_blank" rel="noopener noreferrer">Documento informativo oficial sobre FODETEL ↗</a>
+              <a href="https://www.telecomunicaciones.gob.ec/formulario-fodetel/" target="_blank" rel="noopener noreferrer">Aviso de MINTEL sobre trámites FODETEL ↗</a>
+              <a href="https://www.arcotel.gob.ec/" target="_blank" rel="noopener noreferrer">Portal de ARCOTEL ↗</a>
+            </details>
+          </article>
+          <article class="service-card" id="servicio-contingencia">
+            <div class="service-icon service-icon-violet" aria-hidden="true"><svg class="illustration" viewBox="0 0 64 64"><use href="#icon-contingency"></use></svg></div>
+            <h3 data-content="services.contingency.title">Planes de contingencia</h3>
+            <p data-content="services.contingency.description">Elaboración, actualización y preparación para la presentación anual del plan de contingencia exigido a los prestadores sujetos a la normativa de ARCOTEL.</p>
+            <a class="service-consult whatsapp-link" data-message-content="services.contingency.whatsappMessage" data-message="Hola, quiero consultar sobre planes de contingencia para telecomunicaciones." href="https://wa.me/593983022842" target="_blank" rel="noopener noreferrer"><svg class="illustration" viewBox="0 0 64 64" aria-hidden="true"><use href="#icon-chat"></use></svg> Consultar este servicio</a>
+            <details class="service-details">
+              <summary>Finalidad, obligación y presentación</summary>
+              <p><strong>Finalidad:</strong> planificar acciones preventivas, de respuesta y recuperación para mantener o restablecer los servicios de telecomunicaciones ante desastres naturales, calamidades públicas, conmociones internas, agresiones y otras emergencias.</p>
+              <p><strong>¿Quiénes deben presentarlo?</strong> ARCOTEL indica que la obligación aplica a los prestadores de servicios del régimen general, entre ellos SMA y OMV, telefonía fija, acceso a Internet, portadores, troncalizados, transporte internacional, telecomunicaciones por satélite, AVS, comunales, valor agregado, televisión abierta y radiodifusión sonora.</p>
+              <p><strong>Plazo y canal:</strong> hasta el 31 de enero de cada año, mediante el Sistema Plan de Contingencia de ARCOTEL. La Agencia puede comunicar fechas sugeridas de carga; el plazo oficial se mantiene salvo disposición vigente distinta. No se entrega copia física.</p>
+              <p><strong>Contenido de trabajo:</strong> aprobación institucional, marco aplicable, descripción del sistema y servicios cubiertos, análisis de criticidad, estrategias y procedimientos de activación, responsables, recuperación, pruebas o simulacros y control de actualización. Se debe utilizar el formato oficial vigente para el servicio.</p>
+              <p><strong>Incumplimiento:</strong> ARCOTEL señala que la carencia del plan y la falta de presentación pueden constituir infracciones bajo la Ley Orgánica de Telecomunicaciones; la calificación depende de los hechos y la norma aplicable.</p>
+              <ul><li>Identificar los títulos y servicios del prestador y el formato ARCOTEL correspondiente.</li><li>Documentar sistemas, riesgos, dependencias, responsables y acciones de continuidad.</li><li>Revisar, aprobar y cargar el plan en el sistema dentro del plazo.</li><li>Conservar evidencia de aprobación, pruebas y presentación; actualizar cuando cambien riesgos o infraestructura y atender requerimientos de ARCOTEL.</li></ul>
+              <a href="https://www.arcotel.gob.ec/planes-de-contingencia/" target="_blank" rel="noopener noreferrer">Normativa, formatos y preguntas frecuentes de ARCOTEL ↗</a>
+              <a href="https://apc.arcotel.gob.ec/SisPlanContingencia/" target="_blank" rel="noopener noreferrer">Ingresar al Sistema Plan de Contingencia ↗</a>
+              <a href="https://www.arcotel.gob.ec/presentacion-de-planes-de-contingencia-2025/" target="_blank" rel="noopener noreferrer">Aviso de presentación y contactos de ARCOTEL ↗</a>
+            </details>
+          </article>
+          <article class="service-card" id="servicio-sisregi">
+            <div class="service-icon service-icon-blue" aria-hidden="true"><svg class="illustration" viewBox="0 0 64 64"><use href="#icon-sisregi"></use></svg></div>
+            <h3 data-content="services.sisregi.title">Declaración de ingresos y pagos SISREGI</h3>
+            <p data-content="services.sisregi.description">Asesoría para preparar y presentar en línea las declaraciones de ingresos y pagos semestrales que correspondan ante ARCOTEL.</p>
+            <a class="service-consult whatsapp-link" data-message-content="services.sisregi.whatsappMessage" data-message="Hola, quiero consultar sobre declaraciones de ingresos y pagos SISREGI." href="https://wa.me/593983022842" target="_blank" rel="noopener noreferrer"><svg class="illustration" viewBox="0 0 64 64" aria-hidden="true"><use href="#icon-chat"></use></svg> Consultar este servicio</a>
+            <details class="service-details">
+              <summary>Función, alcance y cumplimiento</summary>
+              <p><strong>¿Qué es?</strong> SISREGI es el Sistema de Registro de Ingresos de Servicios de Telecomunicaciones y Radiodifusión, plataforma en línea de ARCOTEL para gestionar la declaración de ingresos de los prestadores sujetos a esta obligación.</p>
+              <p><strong>¿Para qué se utiliza?</strong> Para declarar los ingresos del período correspondiente y gestionar el pago de derechos semestrales asociados a los servicios que ARCOTEL determine.</p>
+              <p><strong>Servicios informados por ARCOTEL:</strong> cable submarino, acceso a Internet, segmento espacial, telecomunicaciones móviles por satélite, telefonía fija, audio y video por suscripción, servicios de valor agregado y otros que determine el Directorio de ARCOTEL.</p>
+              <p><strong>Período y vencimientos:</strong> la declaración corresponde a períodos semestrales (enero–junio y julio–diciembre). En la comunicación oficial sobre 2023, ARCOTEL indicó como fechas el 15 de julio para el primer semestre y el 15 de enero para el segundo. Confirma la resolución, calendario e instrucciones vigentes para cada período antes de presentar y pagar.</p>
+              <p><strong>Presentación:</strong> el formulario se completa en línea en SISREGI siguiendo el instructivo aplicable. La información declarada permite a ARCOTEL gestionar el control y los derechos que correspondan conforme a la normativa y al título habilitante.</p>
+              <ul><li>Identificar el título habilitante, servicio y período que deben declararse.</li><li>Conciliar los ingresos del período con los registros contables y el formulario vigente.</li><li>Revisar el instructivo, presentar en SISREGI y atender el pago que corresponda dentro del plazo oficial.</li><li>Conservar la declaración enviada, acuse de recepción y comprobantes.</li></ul>
+              <p>SISREGI es una plataforma de declaración y gestión de ingresos; no es una concesión, permiso o nuevo título habilitante. El deber y el tratamiento aplicables dependen del servicio, título y resoluciones vigentes.</p>
+              <a href="http://servicios.arcotel.gob.ec/Sisregi/index.aspx" target="_blank" rel="noopener noreferrer">Ingresar al portal SISREGI ↗</a>
+              <a href="https://www.arcotel.gob.ec/aplicacion-del-formulario-de-declaracion-de-ingresos-por-servicios-de-telecomunicaciones-inserto-en-el-sistema-sisregi/" target="_blank" rel="noopener noreferrer">Formulario e información oficial de ARCOTEL ↗</a>
+            </details>
+          </article>
+          <article class="service-card" id="servicio-seguridad">
+            <div class="service-icon service-icon-rose" aria-hidden="true"><svg class="illustration" viewBox="0 0 64 64"><use href="#icon-security"></use></svg></div>
+            <h3 data-content="services.security.title">Auditorías de seguridad de información</h3>
+            <p data-content="services.security.description">Evaluación de controles, identificación de brechas y recomendaciones priorizadas para mejorar la seguridad de la información.</p>
+            <a class="service-consult whatsapp-link" data-message-content="services.security.whatsappMessage" data-message="Hola, quiero consultar sobre auditorías de seguridad de información." href="https://wa.me/593983022842" target="_blank" rel="noopener noreferrer"><svg class="illustration" viewBox="0 0 64 64" aria-hidden="true"><use href="#icon-chat"></use></svg> Consultar este servicio</a>
+            <details class="service-details">
+              <summary>¿Qué trámite y requisitos requiere?</summary>
+              <p>La auditoría es un servicio profesional y no una concesión, autorización o título habilitante de telecomunicaciones. Si una norma, contrato o requerimiento de autoridad la exige, el alcance y las evidencias deben ajustarse a ese instrumento.</p>
+              <ul><li>Alcance, sistemas y período a evaluar.</li><li>Políticas, inventarios, matriz de riesgos y evidencias de controles.</li><li>Entrevistas y plan de auditoría acordados con la entidad.</li></ul>
+            </details>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section procedure-report" id="tipos-tramite">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">Reporte regulatorio</div>
+          <h2>Cómo distinguir los tipos de trámite</h2>
+          <p>“Título habilitante” es el documento jurídico que habilita un servicio o el uso del espectro. Concesión, autorización y registro son modalidades o instrumentos concretos; no son sinónimos intercambiables.</p>
+        </div>
+        <div class="report-table-wrap">
+          <table class="report-table">
+            <thead><tr><th>Tipo</th><th>Qué significa</th><th>Cuándo se utiliza en estos servicios</th></tr></thead>
+            <tbody>
+              <tr><td>Título habilitante</td><td>Nombre general del instrumento jurídico emitido e inscrito por ARCOTEL que faculta prestar un servicio o usar/explotar frecuencias.</td><td>Es la categoría general. La ficha y resolución de cada servicio determinan la modalidad concreta y su alcance.</td></tr>
+              <tr><td>Registro</td><td>Inscripción del operador o servicio ante ARCOTEL conforme al procedimiento aplicable; no equivale automáticamente a una autorización de espectro.</td><td>ARCOTEL publica el otorgamiento del título de registro para el Servicio de Acceso a Internet (SAI). Si el despliegue usa frecuencias, se debe revisar además el instrumento correspondiente al espectro.</td></tr>
+              <tr><td>Concesión</td><td>Instrumento para asignar derechos de prestación o uso de frecuencias en los casos y bajo el procedimiento previstos en la ley y regulación.</td><td>La radiodifusión sonora FM y la televisión abierta suelen requerir adjudicación de frecuencias mediante el proceso público aplicable. La concesión de frecuencia no debe confundirse con una autorización temporal.</td></tr>
+              <tr><td>Autorización</td><td>Habilitación expresa para los supuestos definidos en la normativa; puede referirse a operación de red privada, frecuencias o un uso temporal, según el trámite.</td><td>Redes privadas y ciertos usos o modificaciones de frecuencias. La autorización temporal de radiodifusión no habilita por sí sola la operación permanente del servicio.</td></tr>
+              <tr><td>Permiso</td><td>Término que aparece en normas y títulos de ciertos regímenes o documentos anteriores. No es una categoría genérica que pueda asignarse a cualquier servicio.</td><td>Para AVS y otros casos debe utilizarse la denominación e instrumento que indique la ficha vigente y la resolución individual de ARCOTEL; no inferirlo solo por el nombre histórico “permisionario”.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="report-note">Regla práctica: primero se identifica si se prestará un servicio a terceros o se operará una red para uso propio; después se determina si se utilizará espectro radioeléctrico y, por último, se verifica el trámite específico, la banda, el tipo de red y la calidad del solicitante. El estudio de ingeniería es un insumo del expediente y no reemplaza el título habilitante.</p>
+        <div class="report-sources">
+          <a href="https://www.arcotel.gob.ec/preguntas-frecuentes-2-titulos-habilitantes-y-frecuencias-para-telecomunicaciones/" target="_blank" rel="noopener noreferrer">FAQ ARCOTEL: títulos y frecuencias ↗</a>
+          <a href="https://www.arcotel.gob.ec/arcotel-actualizo-requisitos-para-la-solicitud-de-otorgamiento-de-titulos-habilitantes-de-varios-servicios-de-telecomunicaciones/" target="_blank" rel="noopener noreferrer">Requisitos actualizados para varios servicios ↗</a>
+          <a href="https://www.arcotel.gob.ec/" target="_blank" rel="noopener noreferrer">Portal oficial ARCOTEL ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section engineering" id="estudios-ingenieria">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow" data-content="engineeringSection.eyebrow">Estudios de ingeniería</div>
+          <h2 data-content="engineeringSection.title">Diseño y documentación técnica por tipo de servicio</h2>
+          <p data-content="engineeringSection.description">Desarrollamos estudios y proyectos técnicos para estas áreas. El contenido y los entregables se definen según el servicio, las características de la red y el trámite aplicable.</p>
+        </div>
+        <div class="engineering-grid">
+          <article class="engineering-card" data-study="sai">
+            <div class="engineering-visual visual-blue" aria-hidden="true"><svg class="illustration" viewBox="0 0 64 64"><use href="#icon-internet"></use></svg></div>
+            <h3 data-content="studies.sai.title">Acceso a Internet (SAI)</h3>
+            <p data-content="studies.sai.description">Diseño y dimensionamiento de redes para prestar acceso a Internet: topología, capacidad, equipos, infraestructura y área de cobertura o servicio, conforme al alcance del proyecto.</p>
+            <details class="engineering-details">
+              <summary>Trámite y requisitos orientativos</summary>
+              <p><strong>Tipo:</strong> título habilitante de registro para prestar SAI. El uso de frecuencias, si aplica, requiere revisar además el título correspondiente al espectro.</p>
+              <ul><li>Solicitud general ARCOTEL y datos de identificación y estructura societaria.</li><li>Documentos de constitución y nombramiento del representante legal, cuando corresponda.</li><li>Declaraciones requeridas por el procedimiento, plan financiero y plan de expansión.</li><li>Proyecto técnico: infraestructura física o, para red inalámbrica, formularios MDBA, enlaces radioeléctricos o satelitales según el caso.</li><li>Documentación adicional sobre interferencias, servicio satelital o ubicación de estaciones cuando aplique.</li></ul>
+              <a href="https://www.arcotel.gob.ec/requisitos-acceso-a-internet2/" target="_blank" rel="noopener noreferrer">Requisitos oficiales SAI ↗</a>
+            </details>
+          </article>
+          <article class="engineering-card" data-study="avs">
+            <div class="engineering-visual visual-purple" aria-hidden="true"><svg class="illustration" viewBox="0 0 64 64"><use href="#icon-avs"></use></svg></div>
+            <h3 data-content="studies.avs.title">Audio y Video por Suscripción (AVS)</h3>
+            <p data-content="studies.avs.description">Diseño de la infraestructura para recibir, procesar y distribuir señales de audio y video por suscripción, incluyendo cabecera, red de transporte y distribución, equipos y área de cobertura.</p>
+            <details class="engineering-details">
+              <summary>Trámite y requisitos orientativos</summary>
+              <p><strong>Tipo:</strong> otorgamiento del título habilitante para AVS. La ficha y resolución ARCOTEL determinan el instrumento/modalidad concreta; no se debe confundir con una concesión de radiodifusión abierta.</p>
+              <ul><li>Solicitud general y documentos de existencia y representación del solicitante.</li><li>Para personas jurídicas privadas: escritura y estatuto, además de las declaraciones exigidas.</li><li>Estudio técnico del sistema y su modalidad (formularios FO-CTDS-52 a FO-CTDS-57).</li><li>Estudio de sostenibilidad financiera (formularios FO-CTDS-58 a FO-CTDS-67).</li><li>Declaración de responsabilidad y anexos específicos que correspondan al tipo de entidad.</li></ul>
+              <a href="https://www.arcotel.gob.ec/requisitos-audio-y-video-por-suscripcion2/" target="_blank" rel="noopener noreferrer">Requisitos oficiales AVS ↗</a>
+            </details>
+          </article>
+          <article class="engineering-card" data-study="radio">
+            <div class="engineering-visual visual-teal" aria-hidden="true"><svg class="illustration" viewBox="0 0 64 64"><use href="#icon-radio"></use></svg></div>
+            <h3 data-content="studies.radio.title">Sistemas de radiocomunicaciones VHF y UHF</h3>
+            <p data-content="studies.radio.description">Estudios de estaciones y enlaces de radiocomunicación en VHF/UHF, con análisis de cobertura, ubicación, antenas, equipos y parámetros técnicos de operación aplicables.</p>
+            <details class="engineering-details">
+              <summary>Trámite y requisitos orientativos</summary>
+              <p><strong>Tipo:</strong> depende del uso. Para uso propio, título de operación de red privada y el instrumento de uso de frecuencias que corresponda; para prestar un servicio a terceros, título del servicio y asignación del espectro aplicable.</p>
+              <ul><li>Solicitud general y documentos del titular/representante.</li><li>Proyecto técnico: sitios, coordenadas, equipos, antenas, frecuencias y parámetros de operación.</li><li>Descripción del uso, cobertura y estaciones fijas o móviles.</li><li>Derecho de uso de los sitios y formularios técnicos de ARCOTEL para el sistema.</li><li>Certificados o estudios complementarios que exijan la banda, ubicación y trámite específico.</li></ul>
+              <a href="https://www.arcotel.gob.ec/modificaciones-tecnicas-red-inalambrica-frecuencias/" target="_blank" rel="noopener noreferrer">Sistemas radioeléctricos y formularios ARCOTEL ↗</a>
+            </details>
+          </article>
+          <article class="engineering-card" data-study="fm">
+            <div class="engineering-visual visual-orange" aria-hidden="true"><svg class="illustration" viewBox="0 0 64 64"><use href="#icon-fm"></use></svg></div>
+            <h3 data-content="studies.fm.title">Radiodifusión sonora FM</h3>
+            <p data-content="studies.fm.description">Estudios técnicos para sistemas de radiodifusión FM, considerando estación transmisora, sistema radiante, parámetros de emisión y cobertura prevista según la planificación y regulación vigentes.</p>
+            <details class="engineering-details">
+              <summary>Trámite y requisitos orientativos</summary>
+              <p><strong>Tipo:</strong> concesión de frecuencia para la operación regular, mediante el procedimiento público competitivo que corresponda. La autorización temporal, cuando proceda, es excepcional y no habilita una operación permanente.</p>
+              <ul><li>Participar en el proceso y cumplir bases, cronograma y requisitos de la convocatoria vigente.</li><li>Presentar documentación del solicitante, representación y categoría del medio.</li><li>Proyecto técnico con parámetros de estación, antenas, ubicación, cobertura y canal/frecuencia.</li><li>Presentar formularios, declaraciones y demás documentos financieros o comunicacionales que exijan las bases vigentes.</li></ul>
+              <a href="https://www.arcotel.gob.ec/requisitos-servicios-de-radiodifusion-sonora-television-para-medios-de-comunicacion-publicos-privados-y-comunitarios2/" target="_blank" rel="noopener noreferrer">Requisitos oficiales de radiodifusión ↗</a>
+            </details>
+          </article>
+          <article class="engineering-card" data-study="tv">
+            <div class="engineering-visual visual-cyan" aria-hidden="true"><svg class="illustration" viewBox="0 0 64 64"><use href="#icon-tv"></use></svg></div>
+            <h3 data-content="studies.tv.title">Televisión abierta VHF y UHF</h3>
+            <p data-content="studies.tv.description">Diseño y análisis de sistemas de televisión abierta en VHF/UHF: estación, equipos de transmisión y antenas, parámetros técnicos y cobertura, de acuerdo con las condiciones aplicables al canal.</p>
+            <details class="engineering-details">
+              <summary>Trámite y requisitos orientativos</summary>
+              <p><strong>Tipo:</strong> concesión de frecuencia para televisión abierta en el proceso público competitivo aplicable. Las autorizaciones temporales son excepcionales y no sustituyen el título de operación regular.</p>
+              <ul><li>Solicitud dentro de la convocatoria y conforme a sus bases vigentes.</li><li>Documentos del solicitante, representante y tipo de medio público, privado o comunitario.</li><li>Proyecto técnico de canal, estación, transmisor, antenas, ubicación y cobertura.</li><li>Formularios, declaraciones y requisitos adicionales expresamente establecidos en las bases.</li></ul>
+              <a href="https://www.arcotel.gob.ec/requisitos-servicios-de-radiodifusion-sonora-television-para-medios-de-comunicacion-publicos-privados-y-comunitarios2/" target="_blank" rel="noopener noreferrer">Requisitos oficiales de televisión abierta ↗</a>
+            </details>
+          </article>
+          <article class="engineering-card" data-study="satellite">
+            <div class="engineering-visual visual-rose" aria-hidden="true"><svg class="illustration" viewBox="0 0 64 64"><use href="#icon-satellite"></use></svg></div>
+            <h3 data-content="studies.satellite.title">Sistemas satelitales</h3>
+            <p data-content="studies.satellite.description">Estudios de estaciones terrenas y enlaces satelitales, incluyendo ubicación, antenas, equipos, banda y parámetros técnicos requeridos para el sistema y la gestión correspondiente.</p>
+            <details class="engineering-details">
+              <summary>Trámite y requisitos orientativos</summary>
+              <p><strong>Tipo:</strong> según el caso, título del servicio de telecomunicaciones (por ejemplo, SAI o telecomunicaciones móviles por satélite) o título de operación de red privada; el uso de frecuencias y estaciones satelitales se habilita según el régimen aplicable.</p>
+              <ul><li>Solicitud y documentación legal del operador.</li><li>Proyecto y formularios técnicos con estaciones, coordenadas, bandas, antenas y parámetros del enlace.</li><li>Para SAI con enlace satelital: carta de autorización del prestador del segmento espacial.</li><li>Verificación de satélite autorizado y certificaciones aplicables a emplazamientos o interferencia.</li></ul>
+              <a href="https://www.arcotel.gob.ec/requisitos-acceso-a-internet2/" target="_blank" rel="noopener noreferrer">Requisitos SAI y enlaces satelitales ↗</a>
+            </details>
+          </article>
+          <article class="engineering-card" data-study="privateNetwork">
+            <div class="engineering-visual visual-indigo" aria-hidden="true"><svg class="illustration" viewBox="0 0 64 64"><use href="#icon-private-network"></use></svg></div>
+            <h3 data-content="studies.privateNetwork.title">Redes privadas</h3>
+            <p data-content="studies.privateNetwork.description">Diseño de redes para comunicaciones de uso privado: arquitectura, cobertura, infraestructura, equipos y enlaces requeridos, considerando las autorizaciones que correspondan a las frecuencias utilizadas.</p>
+            <details class="engineering-details">
+              <summary>Trámite y requisitos orientativos</summary>
+              <p><strong>Tipo:</strong> título habilitante de operación de red privada; si utiliza espectro, se tramita conjuntamente el uso de frecuencias bajo la modalidad que corresponda. La red privada es para beneficio exclusivo de su titular, no para ofrecer servicios al público.</p>
+              <ul><li>Solicitud general, identificación del solicitante y documentos societarios/representación cuando correspondan.</li><li>Proyecto técnico de la red, sitios, enlaces y características de frecuencias.</li><li>Derecho de propiedad o arrendamiento de ubicaciones; para puntos móviles, declaración de control según el procedimiento.</li><li>Declaraciones de responsabilidad y autorización de verificación de información.</li><li>Formularios técnicos y documentos específicos del sistema radioeléctrico elegido.</li></ul>
+              <a href="https://www.arcotel.gob.ec/requisitos-red-privada3/" target="_blank" rel="noopener noreferrer">Requisitos oficiales para red privada ↗</a>
+            </details>
+          </article>
+          <article class="engineering-card" data-study="mbda">
+            <div class="engineering-visual visual-blue" aria-hidden="true"><svg class="illustration" viewBox="0 0 64 64"><use href="#icon-mbda"></use></svg></div>
+            <h3 data-content="studies.mbda.title">Enlaces de Modulación Digital de Banda Ancha (MDBA)</h3>
+            <p data-content="studies.mbda.description">Estudios de ingeniería para enlaces MDBA, con revisión de la arquitectura del enlace, ubicación de estaciones, equipos, antenas y parámetros de operación, contrastados con la normativa técnica vigente de ARCOTEL.</p>
+            <details class="engineering-details">
+              <summary>Trámite y requisitos orientativos</summary>
+              <p><strong>Tipo:</strong> MDBA es una tecnología/sistema y no sustituye el título del servicio o de la red. ARCOTEL contempla concesión o autorización para uso de frecuencias según el caso, junto con el registro del servicio o autorización de red privada que corresponda.</p>
+              <ul><li>Solicitud general y título del servicio o red que utilizará el enlace.</li><li>Proyecto MDBA y formularios técnicos con estaciones, coordenadas, antenas, equipos y parámetros.</li><li>Documentación de espectro asociada al propósito (prestación pública o red privada).</li><li>Certificado DGAC de no afectación cuando sea exigible por ubicación.</li></ul>
+              <a href="https://www.arcotel.gob.ec/otorgamiento-de-titulos-habilitantes-mdba/" target="_blank" rel="noopener noreferrer">Trámite oficial de MDBA ↗</a>
+              <a href="https://www.arcotel.gob.ec/requisitos-mdba/" target="_blank" rel="noopener noreferrer">Requisitos oficiales MDBA ↗</a>
+            </details>
+          </article>
+        </div>
+        <p class="engineering-note">Las listas son una guía inicial y no reemplazan los requisitos oficiales ni garantizan aprobación. ARCOTEL puede actualizar formularios, bandas, convocatorias y condiciones. Confirma la modalidad, vigencia y requisitos íntegros del trámite en la ficha oficial enlazada antes de presentar la solicitud. Consulta también el <a href="#tipos-tramite">reporte sobre tipos de trámite</a>.</p>
+      </div>
+    </section>
+
+    <section class="section regulation" id="normativa">
+      <div class="container reg-grid">
+        <div class="reg-intro">
+          <div class="eyebrow" data-content="regulationSection.eyebrow">Marco regulatorio</div>
+          <h2 data-content="regulationSection.title">Normativa que conviene tener en el radar</h2>
+          <p data-content="regulationSection.description">Identifica las fuentes oficiales que pueden incidir en tu servicio y confirma siempre la versión vigente y su aplicabilidad.</p>
+          <p class="source-note">Contenido informativo, no constituye asesoría legal. La regulación y los requisitos pueden cambiar; verifica en los canales oficiales de ARCOTEL y las autoridades competentes.</p>
+        </div>
+        <div class="reg-list">
+          <a class="reg-item" href="https://www.arcotel.gob.ec/" target="_blank" rel="noopener noreferrer">
+            <span class="reg-number">01</span><span><strong>Ley Orgánica de Telecomunicaciones y su reglamento</strong><small>Marco general para la prestación de servicios de telecomunicaciones en Ecuador.</small></span><span class="external" aria-hidden="true">↗</span>
+          </a>
+          <a class="reg-item" href="https://www.arcotel.gob.ec/" target="_blank" rel="noopener noreferrer">
+            <span class="reg-number">02</span><span><strong>Normativa y resoluciones de ARCOTEL</strong><small>Reglamentos, resoluciones, títulos habilitantes y obligaciones aplicables.</small></span><span class="external" aria-hidden="true">↗</span>
+          </a>
+          <a class="reg-item" href="https://www.arcotel.gob.ec/" target="_blank" rel="noopener noreferrer">
+            <span class="reg-number">03</span><span><strong>Plan Nacional de Frecuencias</strong><small>Consulta la asignación y condiciones de uso del espectro radioeléctrico.</small></span><span class="external" aria-hidden="true">↗</span>
+          </a>
+          <a class="reg-item" href="https://www.arcotel.gob.ec/" target="_blank" rel="noopener noreferrer">
+            <span class="reg-number">04</span><span><strong>Obligaciones de reportes y contribuciones</strong><small>Revisa fechas, formatos y procedimientos vigentes en los sistemas oficiales.</small></span><span class="external" aria-hidden="true">↗</span>
+          </a>
+          <a class="reg-item" href="https://www.telecomunicaciones.gob.ec/" target="_blank" rel="noopener noreferrer">
+            <span class="reg-number">05</span><span><strong>Políticas y lineamientos sectoriales</strong><small>Información del Ministerio de Telecomunicaciones y de la Sociedad de la Información.</small></span><span class="external" aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="consejos">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow" data-content="tipsSection.eyebrow">Tips regulatorios</div>
+          <h2 data-content="tipsSection.title">Pequeños hábitos que evitan grandes apuros</h2>
+          <p data-content="tipsSection.description">Una gestión preventiva de tus obligaciones puede marcar la diferencia. Estas recomendaciones son un punto de partida.</p>
+        </div>
+        <div class="tips-grid">
+          <article class="tip-card"><div class="tip-tag" data-content="tipsSection.items.0.tag">01 · Calendario</div><h3 data-content="tipsSection.items.0.title">Anticípate a los vencimientos</h3><p data-content="tipsSection.items.0.description">Mantén un calendario centralizado de reportes, pagos y renovaciones con responsables y recordatorios previos.</p></article>
+          <article class="tip-card"><div class="tip-tag" data-content="tipsSection.items.1.tag">02 · Evidencias</div><h3 data-content="tipsSection.items.1.title">Guarda trazabilidad de cada gestión</h3><p data-content="tipsSection.items.1.description">Conserva comprobantes, versiones enviadas, acuses de recepción y comunicaciones asociadas a cada trámite.</p></article>
+          <article class="tip-card"><div class="tip-tag" data-content="tipsSection.items.2.tag">03 · Revisión</div><h3 data-content="tipsSection.items.2.title">Verifica la fuente antes de actuar</h3><p data-content="tipsSection.items.2.description">Confirma formularios, requisitos y normativa en canales oficiales; evita basar decisiones en documentos desactualizados.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cases" id="experiencia">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow" data-content="casesSection.eyebrow">Casos de éxito</div>
+          <h2 data-content="casesSection.title">Resultados que empiezan con una buena gestión</h2>
+          <p data-content="casesSection.description">Ejemplos de retos en los que un acompañamiento especializado puede aportar orden y claridad.</p>
+        </div>
+        <div class="cases-grid">
+          <article class="case-card"><div class="case-label" data-content="casesSection.items.0.label">Ingeniería</div><h3 data-content="casesSection.items.0.title">Documentación técnica lista para revisión</h3><p data-content="casesSection.items.0.description">Consolidación de información de red y criterios técnicos en un expediente ordenado para facilitar su revisión y seguimiento.</p></article>
+          <article class="case-card"><div class="case-label" data-content="casesSection.items.1.label">Cumplimiento</div><h3 data-content="casesSection.items.1.title">Obligaciones bajo control</h3><p data-content="casesSection.items.1.description">Organización de fechas, responsables y respaldos de reportes para dar más visibilidad al calendario regulatorio del operador.</p></article>
+          <article class="case-card"><div class="case-label" data-content="casesSection.items.2.label">Continuidad</div><h3 data-content="casesSection.items.2.title">Preparación ante incidentes</h3><p data-content="casesSection.items.2.description">Definición de procedimientos y roles para mejorar la preparación del equipo ante interrupciones del servicio.</p></article>
+        </div>
+        <p class="case-disclaimer" data-content="casesSection.disclaimer">Estos ejemplos son ilustrativos y no representan proyectos ejecutados ni resultados atribuibles a clientes. Reemplazar por casos verificables y autorizados antes de publicar como experiencia real.</p>
+      </div>
+    </section>
+
+    <section class="contact" id="contacto">
+      <div class="container">
+        <div class="contact-box">
+          <div>
+            <div class="eyebrow" data-content="contact.eyebrow">Hablemos de tu proyecto</div>
+            <h2 data-content="contact.title">¿Qué necesita tu operación?</h2>
+            <p data-content="contact.description">Cuéntanos qué servicio buscas y te ayudamos a identificar los siguientes pasos.</p>
+          </div>
+          <a class="button whatsapp-link" data-message-content="contact.whatsappMessage" data-message="Hola, quiero conversar sobre servicios regulatorios de telecomunicaciones." href="https://wa.me/?text=Hola%2C%20quiero%20conversar%20sobre%20servicios%20regulatorios%20de%20telecomunicaciones." target="_blank" rel="noopener noreferrer">Escribir por WhatsApp <span aria-hidden="true">↗</span></a>
+          <p class="contact-help" id="whatsapp-help">WhatsApp: <a data-phone-link href="tel:+593983022842"><span data-content="contact.phoneDisplay">+593 98 302 2842</span></a> · Ecuador</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <a class="brand" href="#inicio"><span class="brand-mark" aria-hidden="true"><svg class="illustration" viewBox="0 0 64 64"><use href="#icon-brand"></use></svg></span> <span data-content="brand.name">Regulatorio Telecomunicaciones</span></a>
+      <p>© <span id="year"></span> <span data-content="brand.name">Regulatorio Telecomunicaciones</span> · <span data-content="footer.description">Servicios regulatorios</span></p>
+      <div class="footer-links"><a href="#tipos-tramite">Tipos de trámite</a><a href="#normativa">Normativa</a><a href="#servicios">Servicios</a><a href="#contacto">Contacto</a></div>
+      <a class="admin-link" href="/admin/">Administrar sitio</a>
+    </div>
+  </footer>
+  <script src="content-loader.js"></script>
+</body>
+</html>
